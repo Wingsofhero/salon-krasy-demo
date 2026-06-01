@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Elegantná ukážková webstránka pre salón krásy. Obsah, fotografie a kontaktné údaje sú ilustračné."
+    />
+    <title>ÉLAN Atelier | Ukážková maketa salónu krásy</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="demo-bar">
+      <div class="page-shell demo-bar__inner">
+        <span class="demo-bar__label">
+          <span class="demo-bar__dot"></span>
+          Prezentačná maketa
+        </span>
+        <span class="demo-bar__copy"
+          >Fotografie, služby aj údaje sú zatiaľ ilustračné.</span
+        >
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="page-shell nav" aria-label="Hlavná navigácia">
+        <a class="brand" href="#uvod" aria-label="ÉLAN Atelier - domov">
+          <span class="brand__monogram">É</span>
+          <span class="brand__name"
+            >ÉLAN <small>beauty atelier</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-menu"
+          aria-label="Otvoriť menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="main-menu">
+          <a href="#sluzby">Služby</a>
+          <a href="#pribeh">O salóne</a>
+          <a href="#recenzie">Recenzie</a>
+          <a href="#kontakt">Kontakt</a>
+          <button class="button button--small button--outline" data-demo-action>
+            Rezervovať
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="uvod">
+        <div class="page-shell hero__grid">
+          <div class="hero__copy reveal">
+            <p class="eyebrow"><span></span> Starostlivosť, ktorú cítiť</p>
+            <h1>
+              Krása, ktorá
+              <em>zostáva jemná.</em>
+            </h1>
+            <p class="hero__lead">
+              Miesto pre malé rituály, pokojné chvíle a starostlivosť šitú na
+              mieru vašej pleti.
+            </p>
+            <div class="hero__actions">
+              <button class="button button--primary" data-demo-action>
+                Rezervovať návštevu
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M5 12h13m-5-5 5 5-5 5" />
+                </svg>
+              </button>
+              <a class="text-link" href="#sluzby">
+                Objaviť starostlivosť
+                <span aria-hidden="true">↘</span>
+              </a>
+            </div>
+            <div class="hero__details">
+              <div>
+                <span class="hero__detail-label">Ukážková adresa</span>
+                <strong>Vaša ulica 12, Bratislava</strong>
+              </div>
+              <div>
+                <span class="hero__detail-label">Otváracie hodiny</span>
+                <strong>Po - Pi &nbsp; 09:00 - 18:00</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal reveal--delay">
+            <div class="hero__arch">
+              <img
+                src="assets/hero-salon.webp"
+                alt="Ukážkový portrét pre web salónu krásy"
+              />
+              <span class="image-label">Ukážková fotografia</span>
+            </div>
+            <div class="hero__stamp" aria-hidden="true">
+              <svg viewBox="0 0 180 180">
+                <defs>
+                  <path
+                    id="stampPath"
+                    d="M 90,90 m -63,0 a 63,63 0 1,1 126,0 a 63,63 0 1,1 -126,0"
+                  />
+                </defs>
+                <text>
+                  <textPath href="#stampPath">
+                    KRÁSA • POKOJ • STAROSTLIVOSŤ •
+                  </textPath>
+                </text>
+              </svg>
+              <span>É</span>
+            </div>
+            <div class="hero__note">
+              <span>Priestor pre váš salón</span>
+              <p>
+                Fotografie, meno aj kontakty nahradíme vašimi reálnymi údajmi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#sluzby">
+          <span>Posuňte nižšie</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="services section" id="sluzby">
+        <div class="page-shell">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow"><span></span> Naše rituály</p>
+              <h2>Priestor pre vaše <em>služby.</em></h2>
+            </div>
+            <p>
+              Táto ponuka je len ukážkou. Názvy, ceny aj popisy upravíme presne
+              podľa toho, čomu sa váš salón venuje.
+            </p>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card reveal">
+              <div class="service-card__image">
+                <img
+                  src="assets/facial-treatment.webp"
+                  alt="Ukážková fotografia kozmetického ošetrenia pleti"
+                />
+                <span class="image-label">Vymeníme za vašu foto</span>
+              </div>
+              <div class="service-card__content">
+                <span class="service-card__number">01</span>
+                <div>
+                  <p class="service-card__category">Tvár a pleť</p>
+                  <h3>Kozmetické ošetrenia</h3>
+                  <p>
+                    Jemná starostlivosť, hydratácia a chvíľa, ktorú venujete iba
+                    sebe.
+                  </p>
+                </div>
+                <button class="circle-button" data-demo-action aria-label="Zobraziť ukážkovú službu">
+                  ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="service-card service-card--offset reveal reveal--delay">
+              <div class="service-card__image">
+                <img
+                  src="assets/manicure.webp"
+                  alt="Ukážková fotografia upravených nechtov"
+                />
+                <span class="image-label">Vymeníme za vašu foto</span>
+              </div>
+              <div class="service-card__content">
+                <span class="service-card__number">02</span>
+                <div>
+                  <p class="service-card__category">Ruky a nechty</p>
+                  <h3>Manikúra s detailom</h3>
+                  <p>
+                    Precízna úprava, čisté línie a farby, ktoré pôsobia
+                    prirodzene elegantne.
+                  </p>
+                </div>
+                <button class="circle-button" data-demo-action aria-label="Zobraziť ukážkovú službu">
+                  ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="services__menu reveal">
+              <p class="services__menu-label">Ďalšie ukážkové služby</p>
+              <div class="service-row">
+                <span>03</span>
+                <div>
+                  <h3>Obočie a riasy</h3>
+                  <p>Laminácia, úprava, lifting</p>
+                </div>
+                <b>↗</b>
+              </div>
+              <div class="service-row">
+                <span>04</span>
+                <div>
+                  <h3>Telové rituály</h3>
+                  <p>Relax, masáž, regenerácia</p>
+                </div>
+                <b>↗</b>
+              </div>
+              <div class="service-row">
+                <span>05</span>
+                <div>
+                  <h3>Darčekové poukazy</h3>
+                  <p>Malá pozornosť pre blízkych</p>
+                </div>
+                <b>↗</b>
+              </div>
+              <button class="button button--soft" data-demo-action>
+                Pozrieť celý cenník
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story section" id="pribeh">
+        <div class="page-shell story__grid">
+          <div class="story__visual reveal">
+            <div class="story__image">
+              <img
+                src="assets/salon-interior.webp"
+                alt="Ukážkový interiér elegantného salónu krásy"
+              />
+              <span class="image-label">Miesto pre reálny interiér</span>
+            </div>
+            <div class="story__quote">
+              <span>“</span>
+              <p>Jemnosť je ten najkrajší detail.</p>
+            </div>
+          </div>
+
+          <div class="story__copy reveal reveal--delay">
+            <p class="eyebrow"><span></span> O vašom salóne</p>
+            <h2>Aj váš priestor má svoj <em>príbeh.</em></h2>
+            <p class="story__intro">
+              Sem doplníme pár viet o tom, prečo ste si vybrali práve svoju
+              prácu, čím je váš prístup výnimočný a ako sa u vás majú klientky
+              cítiť.
+            </p>
+            <p>
+              Namiesto všeobecných fráz vytvoríme osobný text, ktorý bude
+              pôsobiť prirodzene a dôveryhodne. Presne ako návšteva vášho
+              salónu.
+            </p>
+            <div class="story__facts">
+              <div>
+                <strong>10+</strong>
+                <span>rokov skúseností</span>
+              </div>
+              <div>
+                <strong>850</strong>
+                <span>spokojných klientok</span>
+              </div>
+              <div>
+                <strong>4.9</strong>
+                <span>priemerné hodnotenie</span>
+              </div>
+            </div>
+            <p class="placeholder-note">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 8v4m0 4h.01M4.9 19h14.2c1.5 0 2.45-1.63 1.7-2.93L13.7 3.8c-.75-1.3-2.65-1.3-3.4 0L3.2 16.07C2.45 17.37 3.4 19 4.9 19Z" />
+              </svg>
+              Čísla sú ukážkové. Nahradíme ich reálnymi údajmi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section" id="recenzie">
+        <div class="page-shell">
+          <div class="reviews__top reveal">
+            <div>
+              <p class="eyebrow eyebrow--light"><span></span> Milé slová</p>
+              <h2>Recenzie, ktoré povedia <em>viac.</em></h2>
+            </div>
+            <p>
+              Pošlite nám vaše reálne hodnotenia alebo ich prepojíme priamo s
+              vaším profilom.
+            </p>
+          </div>
+
+          <div class="reviews__grid">
+            <article class="review-card reveal">
+              <div class="review-card__stars">★★★★★</div>
+              <blockquote>
+                “Od prvej chvíle som sa cítila príjemne. Krásne prostredie,
+                jemný prístup a výsledok ešte krajší, než som čakala.”
+              </blockquote>
+              <div class="review-card__author">
+                <span>M</span>
+                <div>
+                  <strong>Martina K.</strong>
+                  <small>Ukážková recenzia</small>
+                </div>
+              </div>
+            </article>
+            <article class="review-card reveal reveal--delay">
+              <div class="review-card__stars">★★★★★</div>
+              <blockquote>
+                “Presne ten typ starostlivosti, pri ktorom na chvíľu vypnete.
+                Vraciam sa pravidelne a vždy s radosťou.”
+              </blockquote>
+              <div class="review-card__author">
+                <span>A</span>
+                <div>
+                  <strong>Andrea P.</strong>
+                  <small>Ukážková recenzia</small>
+                </div>
+              </div>
+            </article>
+            <article class="review-card reveal reveal--later">
+              <div class="review-card__stars">★★★★★</div>
+              <blockquote>
+                “Veľmi oceňujem cit pre detail a pokoj, ktorý tu človek nájde.
+                Moja obľúbená malá pauza od každodenného zhonu.”
+              </blockquote>
+              <div class="review-card__author">
+                <span>L</span>
+                <div>
+                  <strong>Lucia V.</strong>
+                  <small>Ukážková recenzia</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="kontakt">
+        <div class="page-shell">
+          <div class="contact__card reveal">
+            <div class="contact__copy">
+              <p class="eyebrow"><span></span> Kontakt</p>
+              <h2>Vaša chvíľa pre seba môže začať <em>už dnes.</em></h2>
+              <p>
+                Ozvite sa telefonicky alebo si rezervujte termín. Na finálnom
+                webe doplníme váš preferovaný spôsob objednávania.
+              </p>
+              <div class="contact__actions">
+                <a class="button button--primary" href="tel:+421900123456">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+                  </svg>
+                  Zavolať do salónu
+                </a>
+                <button class="text-link" data-demo-action>
+                  Rezervovať online
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <span>Telefón</span>
+                <a href="tel:+421900123456">+421 900 123 456</a>
+                <small>ukážkové číslo</small>
+              </div>
+              <div class="contact__detail">
+                <span>Adresa salónu</span>
+                <strong>Vaša ulica 12<br />811 01 Bratislava</strong>
+                <small>ukážková adresa</small>
+              </div>
+              <div class="contact__detail">
+                <span>Otváracie hodiny</span>
+                <strong>Po - Pi: 09:00 - 18:00<br />So: podľa dohody</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell site-footer__inner">
+        <a class="brand brand--footer" href="#uvod">
+          <span class="brand__monogram">É</span>
+          <span class="brand__name">ÉLAN <small>beauty atelier</small></span>
+        </a>
+        <p>
+          Prezentačná maketa webstránky pre salón krásy. Obsah sa pred
+          spustením upraví.
+        </p>
+        <div class="site-footer__links">
+          <a href="#sluzby">Služby</a>
+          <a href="#kontakt">Kontakt</a>
+          <button data-demo-action>Instagram</button>
+        </div>
+      </div>
+    </footer>
+
+    <a class="mobile-call" href="tel:+421900123456">
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+      </svg>
+      <span>Zavolať</span>
+    </a>
+
+    <dialog class="demo-dialog">
+      <button class="demo-dialog__close" aria-label="Zavrieť okno">×</button>
+      <span class="demo-dialog__icon">É</span>
+      <p class="eyebrow"><span></span> Ukážková funkcia</p>
+      <h2>Toto je zatiaľ iba maketa.</h2>
+      <p>
+        Vo finálnej verzii sem vieme pripojiť online rezervácie, váš telefón,
+        Instagram alebo kontaktný formulár.
+      </p>
+      <button class="button button--primary demo-dialog__confirm">
+        Rozumiem
+      </button>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
