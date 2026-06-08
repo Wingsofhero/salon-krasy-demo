@@ -1,10 +1,18 @@
+const CONTACT = {
+  phoneDisplay: "",
+  phoneHref: "",
+  email: "",
+};
+
 const body = document.body;
 const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".nav-menu a");
-const demoDialog = document.querySelector(".demo-dialog");
-const demoActions = document.querySelectorAll("[data-demo-action]");
-const dialogClose = document.querySelector(".demo-dialog__close");
-const dialogConfirm = document.querySelector(".demo-dialog__confirm");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+const callLinks = document.querySelectorAll(".js-call-link");
+const phoneLabel = document.querySelector(".js-phone-label");
+const emailLabel = document.querySelector(".js-email-label");
+const form = document.querySelector(".booking-form");
+const statusEl = document.querySelector("#form-status");
 
 const closeMenu = () => {
   body.classList.remove("menu-open");
@@ -20,33 +28,46 @@ navToggle.addEventListener("click", () => {
 
 navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-demoActions.forEach((action) => {
-  action.addEventListener("click", () => {
-    closeMenu();
-    demoDialog.showModal();
+if (CONTACT.phoneDisplay && CONTACT.phoneHref) {
+  callLinks.forEach((link) => {
+    link.href = `tel:${CONTACT.phoneHref}`;
+    link.querySelector("span").textContent = CONTACT.phoneDisplay;
   });
-});
+  phoneLabel.textContent = CONTACT.phoneDisplay;
+}
 
-[dialogClose, dialogConfirm].forEach((button) => {
-  button.addEventListener("click", () => demoDialog.close());
-});
+if (CONTACT.email) {
+  emailLabel.textContent = CONTACT.email;
+}
 
-demoDialog.addEventListener("click", (event) => {
-  if (event.target === demoDialog) {
-    demoDialog.close();
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const data = new FormData(form);
+  const lines = [
+    "Dopyt zo stránky Salón Krásy",
+    "",
+    `Meno: ${data.get("name") || ""}`,
+    `Telefón: ${data.get("phone") || ""}`,
+    `Služba: ${data.get("service") || ""}`,
+    `Preferovaný termín: ${data.get("date") || ""}`,
+    "",
+    "Poznámka:",
+    data.get("message") || "",
+  ];
+
+  const bodyText = lines.join("\n");
+
+  if (CONTACT.email) {
+    const subject = encodeURIComponent("Rezervácia zo stránky Salón Krásy");
+    window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+    statusEl.textContent = "Správa je pripravená v emailovej aplikácii.";
+    statusEl.className = "form-note is-ready";
+    form.reset();
+    return;
   }
+
+  statusEl.textContent =
+    "Kontakt zatiaľ nie je doplnený. Dopyt je pripravený, po doplnení emailu sa otvorí emailová aplikácia.";
+  statusEl.className = "form-note is-warning";
 });
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.13 }
-);
-
-document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
